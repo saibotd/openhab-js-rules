@@ -1,0 +1,21 @@
+{
+  "name": "openhab-js-rules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
+    "cron-parser": "^2.7.3",
+    "dotenv": "^6.2.0",
+    "eventsource": "^1.0.7",
+    "lodash": "^4.17.11",
+    "moment-timezone": "^0.5.23",
+    "require-reload": "^0.2.2"
+  }
+}
