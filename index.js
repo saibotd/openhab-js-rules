@@ -1,3 +1,4 @@
+process.chdir(__dirname);
 require('dotenv').config()
 const EventSource = require('eventsource');
 const axios = require('axios');
@@ -137,6 +138,14 @@ async function init(){
     setupRules();
 }
 
-axios.get(url)
-.then(()=> init())
-.catch(e => log('Could not connect to openHAB', e.message))
+function connect(){
+    log('Connecting', url);
+    axios.get(url)
+    .then(()=> init())
+    .catch(e => {
+        console.error('Could not connect to openHAB', e.message);
+        setTimeout(connect, 10000);
+    })
+}
+
+connect();

@@ -1,0 +1,13 @@
+[Unit]
+Description=openhab-js-rules - nodejs rule engine for openHAB 2
+Documentation=https://github.com/saibotd/openhab-js-rules
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/node /home/pi/openhab-js-rules
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
